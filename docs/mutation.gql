@@ -1,0 +1,30 @@
+mutation CREATE_USER($id: ID!, $name: String!, $email: String!, $age: Int!) {
+  createUser(id: $id, name: $name, email: $email, age: $age) {
+    id
+    name
+    email
+    age
+  }
+}
+
+mutation CREATE_PAYMENT_METHOD(
+  $id: ID!
+  $last4: String!
+  $expMonth: Int!
+  $expYear: Int!
+  $userId: ID!
+) {
+  createPaymentMethod(
+    id: $id
+    last4: $last4
+    expMonth: $expMonth
+    expYear: $expYear
+    userId: $userId
+  ) {
+    id
+    last4
+    expMonth
+    expYear
+    userId
+  }
+}
